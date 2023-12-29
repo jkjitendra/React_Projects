@@ -14,7 +14,7 @@ Currency Converter App is a web application that allows users to convert currenc
 
 1. Clone the repository:
 
-   <pre>git clone https://github.com/jkjitendra/React_Projects/currencyconverterapp.git
+   <pre>git clone https://github.com/jkjitendra/React_Projects.git
    </pre>
 2. Install dependencies:
 
