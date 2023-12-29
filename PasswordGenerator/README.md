@@ -15,7 +15,7 @@ Password Generator App is a web application that allows users to generate secure
 
 1. Clone the repository:
 
-   <pre>git clone https://github.com/jkjitendra/React_Projects/passwordgenerator.git
+   <pre>git clone https://github.com/jkjitendra/React_Projects.git
    </pre>
 2. Install dependencies:
 
