@@ -18,7 +18,7 @@ You can see a live demo of the Text Field Display App [here]().
 
 1. Clone the repository:
 
-   <pre>git clone https://github.com/jkjitendra/React_Projects/textfielddisplayapp.git
+   <pre>git clone https://github.com/jkjitendra/React_Projects.git
    </pre>
 2. Install dependencies:
 
