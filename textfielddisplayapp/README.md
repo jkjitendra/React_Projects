@@ -65,6 +65,12 @@ A functional component that contains an input field for entering text. It update
 * `npm run lint`: Run ESLint for code linting.
 * `npm run preview`: Preview the production build.
 
+## Interface Preview:
+
+Below is a screenshot of the Text Field Display App in action:
+
+![Text Field Display App Interface](./src/assets/image.png)
+
 ## Contact
 
 For inquiries or support, please contact Jitendra Tiwari at [jitendakumartiwari849@gmail.com]().
