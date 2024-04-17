@@ -9,7 +9,7 @@ function App() {
 
   const handleMaxCountChange = (e) => {
     const value = e.target.value;
-    let newMaxCount = parseInt(value, 100);
+    let newMaxCount = parseInt(value, 10);
     // setMaxCount(newMaxCount);
     setMaxCount(value === '' ? (textInput.length) : newMaxCount);
 
@@ -68,6 +68,12 @@ function App() {
     return textInput.length - maxCount > 0 ? 'text-[#b7c3ec]' : '';
   };
 
+  const getRemainingCountText = () => {
+    const remaining = maxCount - textInput.length;
+    return `${remaining}`;
+  };
+
+  // {maxCount - textInput.length >= 0 ? maxCount - textInput.length : 0}
   return (
     <div className="main w-full h-screen flex justify-center items-center">
       <div className="textarea-container relative bg-[#5f68ae] p-4">
@@ -93,7 +99,7 @@ function App() {
           <div>
             <span>
               {/* <span className={`${textInput.length - maxCount > 0 ? 'text-[#b7c3ec]' : ''}`}>{maxCount - textInput.length}</span> Characters Left */}
-              <span className={getRemainingCountClass()}>{maxCount - textInput.length >= 0 ? maxCount - textInput.length : 0}</span> Characters Left
+              <span className={getRemainingCountClass()}>{getRemainingCountText()}</span> Characters Left
             </span>
           </div>
         </div>
