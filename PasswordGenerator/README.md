@@ -49,6 +49,12 @@ Password Generator App is a web application that allows users to generate secure
 * `npm run lint`: Run ESLint for code linting.
 * `npm run preview`: Preview the production build.
 
+## Interface Preview
+
+Below is a screenshot of the Password Generator App in action:
+
+![Password Geneartor App Interface](./src/assets/image.png)
+
 ## Code Explanation
 
 The `app.jsx` file contains the React component responsible for rendering the Password Generator App. The application uses state and hooks to manage the length, inclusion of numbers, inclusion of characters, and the generated password.
