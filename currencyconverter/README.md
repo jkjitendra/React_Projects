@@ -49,6 +49,13 @@ Currency Converter App is a web application that allows users to convert currenc
 * `npm run lint`: Run ESLint for code linting.
 * `npm run preview`: Preview the production build.
 
+## Interface Preview
+
+Below is a screenshot of the Currency Converter App in action, showcasing the user-friendly interface and features:
+
+![Currency Converter App Interface](./src/assets/image.png)
+
+
 ## Contact
 
 For inquiries or support, please contact Jitendra Tiwari at [jitendrakumartiwari849@gmail.com]().
