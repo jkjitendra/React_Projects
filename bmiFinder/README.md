@@ -15,7 +15,7 @@ The BMI Calculator App is a simple, user-friendly web application designed to he
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/bmicalculator.git
+   git clone https://github.com/jkjitendra/React_Projects.git
    ```
 2. Install dependencies:
    ```
@@ -51,7 +51,6 @@ The app will be accessible at [http://localhost:5173](https://chatgpt.com/g/g-2f
 ## Interface Preview
 
 Below is a screenshot of the BMI Calculator App in action:
-
 
 ![BMI Calculator App Interface](./src/assets/image.png)
 
