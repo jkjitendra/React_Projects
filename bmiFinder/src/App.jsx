@@ -1,5 +1,7 @@
 import {useState} from 'react';
 import './App.css'
+import InputField from './components/common/input-field/input';
+import SelectField from './components/common/select-field/select';
 
 function App() {
 
@@ -37,7 +39,7 @@ function App() {
     if (weight === 0 || isNaN(weight) || weight < 0 || height === 0 || isNaN(height) || height < 0) {
       errorMessageVal = 'Please enter valid weight and height > 0';
       messageClassVal = 'error-message-dark-red';
-  } else {
+    } else {
 
       let bmiVal;
       let weightVal;
@@ -80,17 +82,17 @@ function App() {
         errorMessageVal = 'Underweight';
         messageClassVal = 'error-message-light-red';
       } else if (bmiVal < 25) {
-          errorMessageVal = 'Normal';
-          messageClassVal = 'error-message-green';
+        errorMessageVal = 'Normal';
+        messageClassVal = 'error-message-green';
       } else if (bmiVal < 30) {
-          errorMessageVal = 'Overweight';
-          messageClassVal = 'error-message-yellow';
+        errorMessageVal = 'Overweight';
+        messageClassVal = 'error-message-yellow';
       } else if (bmiVal <= 35) {
-          errorMessageVal = 'Obese';
-          messageClassVal = 'error-message-higher-red';
+        errorMessageVal = 'Obese';
+        messageClassVal = 'error-message-higher-red';
       } else {
-          errorMessageVal = 'Morbid obesity';
-          messageClassVal = 'error-message-higher-red';
+        errorMessageVal = 'Morbid obesity';
+        messageClassVal = 'error-message-higher-red';
       }
     }
     setMessage(errorMessageVal);
@@ -112,11 +114,12 @@ function App() {
         <form>
           <div className='input-group'>
             <label>Weight</label>
-            <select value={unitOfWeight} onChange={handleWeightUnitChange}>
-              <option value="kg">kg</option>
-              <option value="lb">lb</option>
-            </select>
-            <input
+            <SelectField 
+              value={unitOfWeight}
+              optionValues={["kg", "lb"]}
+              onChange={handleWeightUnitChange}
+            />
+            <InputField
               type='number'
               name='weight'
               placeholder='Enter your weight'
@@ -126,12 +129,12 @@ function App() {
           </div>
           <div className='input-group'>
             <label>Height</label>
-            <select value={unitOfHeight} onChange={handleHeightUnitChange}>
-              <option value="cm">cm</option>
-              <option value="m">m</option>
-              <option value="foot">foot</option>
-            </select>
-            <input
+            <SelectField 
+              value={unitOfHeight}
+              optionValues={["cm", "m", "foot"]}
+              onChange={handleHeightUnitChange}
+            />
+            <InputField
               type='number'
               name='height'
               placeholder='Enter your height'
