@@ -3,7 +3,7 @@ body {
     background-color: #f4f4f9;
     color: #333;
 
-    background-image: url('public/waterfall.webp');
+    background-image: url('/waterfall.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

@@ -35,46 +35,18 @@ function App() {
 
     let errorMessageVal = '';
     let messageClassVal = '';
+    let bmiVal = 0;
 
-    if (weight === 0 || isNaN(weight) || weight < 0 || height === 0 || isNaN(height) || height < 0) {
+    const isValidWeight = weight > 0 && !isNaN(weight);
+    const isValidHeight = height > 0 && !isNaN(height);
+
+    if (!isValidWeight ||!isValidHeight) {
       errorMessageVal = 'Please enter valid weight and height > 0';
       messageClassVal = 'error-message-dark-red';
     } else {
-
-      let bmiVal;
-      let weightVal;
-      let heightVal;
+      let weightVal = unitOfWeight === 'lb' ? weight * 0.45359237 : weight;
+      let heightVal = unitOfHeight === 'm' ? height * 100 : unitOfHeight === 'foot'? height * 30.48 : height;
       
-      if (unitOfWeight === 'lb' && unitOfHeight === 'cm') {
-        weightVal = weight * 0.45359237; // 1 lb = 0.45359237 kg
-        heightVal = height;
-      }
-      
-      if (unitOfWeight === 'kg' && unitOfHeight === 'm') {
-        heightVal = height * 100; // 1 m = 100 cm
-        weightVal = weight;
-      }
-      
-      if (unitOfWeight === 'lb' && unitOfHeight === 'm') {
-        weightVal = (weight * 0.45359237).toFixed(0);
-        heightVal = height * 100;
-      }
-
-      if (unitOfWeight === 'kg' && unitOfHeight === 'foot') {
-        weightVal = weight;
-        heightVal = (height * 30.48).toFixed(0); // 1 foot = 30.48 cm
-      }
-      
-      if (unitOfWeight === 'lb' && unitOfHeight === 'foot') {
-        weightVal = (weight * 0.45359237).toFixed(0);
-        heightVal = (height * 30.48).toFixed(0);
-      }
-
-      if (unitOfWeight === 'kg' && unitOfHeight === 'cm') {
-        heightVal = height;
-        weightVal = weight;
-      }
-     
       bmiVal = weightVal / (heightVal * heightVal) * 10000;
       setbmi(bmiVal.toFixed(1));
 
@@ -139,7 +111,7 @@ function App() {
               name='height'
               placeholder='Enter your height'
               value={height}
-              onChange={(e) => handleHeightChange(e)}
+              onChange={handleHeightChange}
             />
           </div>
           <div className='button-group center'>
